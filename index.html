@@ -88,5 +88,19 @@
             <p>Short description about Person 3's achievements and contributions.</p>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hofEntries = document.querySelectorAll('.hof-entry');
+
+            hofEntries.forEach(entry => {
+                const img = entry.querySelector('img');
+                const link = prompt(`Enter the image link for ${entry.querySelector('h2').textContent}:`);
+                if (link) {
+                    img.src = link;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
