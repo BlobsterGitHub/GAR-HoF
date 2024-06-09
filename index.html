@@ -72,21 +72,23 @@
         <h1>GAR Hall of Fame</h1>
     </header>
     <main>
-        <div class="hof-entry">
-            <img src="https://www.artstation.com/artwork/ZarWbX" alt="Person 1">
-            <h2>Person 1</h2>
-            <p>Short description about Person 1's achievements and contributions.</p>
-        </div>
-        <div class="hof-entry">
-            <img src="https://via.placeholder.com/150" alt="Person 2">
-            <h2>Person 2</h2>
-            <p>Short description about Person 2's achievements and contributions.</p>
-        </div>
-        <div class="hof-entry">
-            <img src="https://via.placeholder.com/150" alt="Person 3">
-            <h2>Person 3</h2>
-            <p>Short description about Person 3's achievements and contributions.</p>
-        </div>
+        <?php
+        // Handle image uploads and render images
+        $image_urls = array(
+            "https://via.placeholder.com/150",
+            "https://via.placeholder.com/150",
+            "https://via.placeholder.com/150"
+        );
+        
+        // Loop through image URLs and render entries
+        foreach ($image_urls as $url) {
+            echo '<div class="hof-entry">';
+            echo '<img src="' . $url . '" alt="Person">';
+            echo '<h2>Person</h2>';
+            echo '<p>Short description about the person\'s achievements and contributions.</p>';
+            echo '</div>';
+        }
+        ?>
     </main>
 </body>
 </html>
