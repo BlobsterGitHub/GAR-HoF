@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAR HoF</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .hof-entry {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .hof-entry img {
+            border-radius: 50%;
+            border: 2px solid white;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .hof-entry h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .hof-entry p {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GAR Hall of Fame</h1>
+    </header>
+    <main>
+        <div class="hof-entry">
+            <img src="https://via.placeholder.com/150" alt="Person 1">
+            <h2>Person 1</h2>
+            <p>Short description about Person 1's achievements and contributions.</p>
+        </div>
+        <div class="hof-entry">
+            <img src="https://via.placeholder.com/150" alt="Person 2">
+            <h2>Person 2</h2>
+            <p>Short description about Person 2's achievements and contributions.</p>
+        </div>
+        <div class="hof-entry">
+            <img src="https://via.placeholder.com/150" alt="Person 3">
+            <h2>Person 3</h2>
+            <p>Short description about Person 3's achievements and contributions.</p>
+        </div>
+    </main>
+</body>
+</html>
