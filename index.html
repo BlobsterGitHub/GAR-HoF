@@ -14,7 +14,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #00264D, #0052A2);
+            background: linear-gradient(to bottom right, #1a365d, #2a4365);
             color: white;
             display: flex;
             flex-direction: column;
@@ -73,17 +73,24 @@
     </header>
     <main>
         <?php
-        // Handle image uploads and render images
-        $image_urls = array(
-            "https://via.placeholder.com/150",
-            "https://via.placeholder.com/150",
-            "https://via.placeholder.com/150"
+        // Function to extract image URL from ArtStation page
+        function getArtStationImage($url) {
+            $html = file_get_contents($url);
+            preg_match('/<meta property="og:image" content="([^"]+)"/', $html, $matches);
+            return $matches[1];
+        }
+
+        // ArtStation URLs for each person
+        $artstation_urls = array(
+            "https://www.artstation.com/artwork/ZarWbX",
+            // Add more ArtStation URLs here
         );
-        
-        // Loop through image URLs and render entries
-        foreach ($image_urls as $url) {
+
+        // Loop through ArtStation URLs and render entries
+        foreach ($artstation_urls as $url) {
+            $image_url = getArtStationImage($url);
             echo '<div class="hof-entry">';
-            echo '<img src="' . $url . '" alt="Person">';
+            echo '<img src="' . $image_url . '" alt="Person">';
             echo '<h2>Person</h2>';
             echo '<p>Short description about the person\'s achievements and contributions.</p>';
             echo '</div>';
